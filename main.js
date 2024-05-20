@@ -1,8 +1,12 @@
+const products = []
 const apiURL = 'https://fakestoreapi.com/products'
 
 const sectionTemplate = document.querySelector('#section-template')
 const cardTemplate = document.querySelector('#card-template')
 const main = document.querySelector('main')
+
+const searchBar = document.querySelector('input[type="search"]')
+const form = document.querySelector('form')
 
 async function loadProductsData(section, categoryName){
     const res = await fetch(`${apiURL}/category/${categoryName}`)
@@ -19,6 +23,7 @@ async function loadProductsData(section, categoryName){
         productPrice.textContent = `${Math.round(Number(data[i].price) * 46.64)}`
 
         section.querySelector('.cards-container').appendChild(card)
+        products.push(data[i])
     }
     main.appendChild(section)
 }
@@ -31,4 +36,16 @@ fetch(`${apiURL}/categories`)
         section.querySelector('h2').textContent = `Best Sellers in ${categories[i]}`
         loadProductsData(section, categories[i])
     }
+})
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    // let value = searchBar.value.toLowerCase()
+    // for (let i = 0; i < products.length; i++){
+    //     const isVisible = products[i].title.toLowerCase().includes(value) || products[i].description.toLowerCase().includes(value)
+    //     if (isVisible){
+    //         console.log(products[i])
+    //     }
+    // }
+    // searchBar.value = ''
 })
