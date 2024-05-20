@@ -66,8 +66,8 @@ main section{
 }
 h2{
     font-size: 1.4rem;
-    margin-bottom: 6px;
     margin: 0;
+    margin-bottom: 20px;
 }
 .cards-container{
     display: flex;
@@ -95,6 +95,9 @@ h2{
 .product-price{
     font-weight: bold;
     font-size: 1.3rem;
+}
+.price-currency{
+    font-size: .9rem;
 }
 
 @media screen and (max-width: 480px){
