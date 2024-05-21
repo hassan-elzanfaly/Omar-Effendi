@@ -11,7 +11,11 @@ const products = []
 
 for (let i = 0; i < categories.length; i++){
     const section = sectionTemplate.content.cloneNode(true).children[0]
-    section.querySelector('h2').textContent = `Best Sellers in ${categories[i].name}`
+    if (categories[i].name !== "Summer Sales"){
+        section.querySelector('h2').textContent = `Best Sellers in ${categories[i].name}`
+    } else{
+        section.querySelector('h2').textContent = `${categories[i].name}`
+    }
 
     const data = categories[i].products
     
