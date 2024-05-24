@@ -1,7 +1,4 @@
-const categories = [{name: "Summer Offers", products: [
-    {title: "Women's Beach Bag - Beige", description: "", price: "600", img: "https://m.media-amazon.com/images/I/71E8dxPvD1L._AC_SX425_.jpg"},
-    {title: "Spring Garden Shirt", description: "", price: "1400", img: "https://is4.revolveassets.com/images/p4/n/uv/DIGR-MS52_V1.jpg"}
-]}, {name: "Apparels", products: [
+const categories = [{name: "Apparels", products: [
     {title: "Mobaco Cotton Oversized Printed T-Shirt - Red", description: "Soft and smooth jersey fabrication, providing added comfort, Ribbed collar, Lightweight and breathable, Highly durable fabric, Great drapability 100% Cotton", price: "290", img: "https://mobaco.com/wp-content/uploads/2024/05/ST385_0170_FIT1.jpg"},
     {title: "Cottonil Men's Derby Tank top - Black", description: "100% Egyptian Cotton Super Soft men's underwear Keeps You Comfortable And Refreshed All Day", price: "100", img: "https://www.cottonilonline.com/cdn/shop/files/S22DRTT01-Navy_5_2.jpg?v=1684594219&width=600"},
     {title: "Mobaco Round Neck Cotton Printed T-Shirt - Black", description: "Soft and smooth jersey fabrication, providing added comfort, Ribbed collar, Lightweight and breathable, Highly durable fabric, Great drapability 100% Cotton", price: "240", img: "https://mobaco.com/wp-content/uploads/2024/04/ST396_0020_1.jpg"},
