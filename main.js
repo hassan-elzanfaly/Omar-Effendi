@@ -7,15 +7,14 @@ const main = document.querySelector('main')
 const searchBar = document.querySelector('input[type="search"]')
 const form = document.querySelector('form')
 
+const marquee = document.querySelector("marquee")
+
 const products = []
 
 for (let i = 0; i < categories.length; i++){
     const section = sectionTemplate.content.cloneNode(true).children[0]
-    if (categories[i].name !== "Summer Sales"){
-        section.querySelector('h2').textContent = `Best Sellers in ${categories[i].name}`
-    } else{
-        section.querySelector('h2').textContent = `${categories[i].name}`
-    }
+    section.querySelector('h2').textContent = `Best Sellers in ${categories[i].name}`
+    section.setAttribute('id', `${categories[i].name}`)
 
     const data = categories[i].products
     
@@ -37,4 +36,16 @@ for (let i = 0; i < categories.length; i++){
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
+    let value = searchBar.value.toLowerCase()
+    // main.replaceChildren()
+    if (value === "tshirt"){
+        value = "t-shirt"
+    }
+    for (let i = 0; i < products.length; i++){
+        const isVisible = products[i].title.toLowerCase().includes(value) || products[i].description.toLowerCase().includes(value)
+        if (isVisible){
+            console.log(products[i])
+        }
+    }
+    searchBar.value = ""
 })
